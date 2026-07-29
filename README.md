@@ -158,6 +158,29 @@ Visit `http://localhost:3000`, register an account, and start searching.
 | POST   | `/api/favorites`                 | Yes  | Save a city                                           |
 | DELETE | `/api/favorites/:index`          | Yes  | Remove a saved city                                   |
 
+## 🎨 Preview
+
+### 1. Register
+<img width="956" height="500" alt="Screenshot 2026-07-29 135717" src="https://github.com/user-attachments/assets/27f22430-8bcf-4df8-839c-03b3b0a773fb" />
+
+### 2. Login
+<img width="959" height="502" alt="Screenshot 2026-07-29 135803" src="https://github.com/user-attachments/assets/e55eddaf-ee8a-415c-ad48-e03bfbe464b4" />
+
+### 3. Home
+<img width="959" height="502" alt="Screenshot 2026-07-29 135840" src="https://github.com/user-attachments/assets/0da83b0b-3399-4236-ad0d-13c96c8ccd77" />
+
+### 4. Search by Location and Time
+<img width="959" height="476" alt="Screenshot 2026-07-29 135954" src="https://github.com/user-attachments/assets/e8370459-78b8-422a-8242-a7bb1f5c7b10" />
+<img width="959" height="502" alt="Screenshot 2026-07-29 140105" src="https://github.com/user-attachments/assets/80c0466e-1131-462f-89e3-9a117cc74fab" />
+
+### 5. Pick a location from Map
+<img width="959" height="502" alt="Screenshot 2026-07-29 140148" src="https://github.com/user-attachments/assets/c1b42fa6-5c35-4784-aa07-9f38b87a49df" />
+<img width="959" height="502" alt="Screenshot 2026-07-29 140305" src="https://github.com/user-attachments/assets/ee64036e-f827-4ce7-9a61-308871052e61" />
+
+### 6. User History
+<img width="959" height="502" alt="Screenshot 2026-07-29 140338" src="https://github.com/user-attachments/assets/c960c06f-b762-4db8-a56b-52e5f342665e" />
+
+
 ## 🗺️ Roadmap
 
 - [x] Authentication (JWT, protected routes)
