@@ -1,0 +1,226 @@
+.auth-screen {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+@media (max-width: 860px) {
+  .auth-screen {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Signature gauge panel ---- */
+.gauge-panel {
+  position: relative;
+  background: radial-gradient(circle at 20% 15%, var(--ink-soft), var(--ink) 70%);
+  color: var(--mist);
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+@media (max-width: 860px) {
+  .gauge-panel {
+    padding: 40px 28px 24px;
+  }
+}
+
+.gauge-panel__content {
+  max-width: 380px;
+  z-index: 1;
+}
+
+.gauge-panel__eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dew);
+  margin-bottom: 18px;
+}
+
+.gauge-panel__title {
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.08;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.gauge-panel__tagline {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--steel-soft);
+  margin: 0;
+}
+
+.gauge-panel__dial {
+  width: min(240px, 60%);
+  height: auto;
+  align-self: center;
+  margin-top: 32px;
+}
+
+.gauge-ring-outer {
+  fill: none;
+  stroke: rgba(157, 178, 196, 0.25);
+  stroke-width: 1.5;
+}
+
+.gauge-ring-inner {
+  fill: rgba(255, 255, 255, 0.02);
+  stroke: rgba(157, 178, 196, 0.18);
+  stroke-width: 1;
+}
+
+.gauge-tick {
+  stroke: var(--steel-soft);
+  stroke-width: 1.5;
+  opacity: 0.5;
+}
+
+.gauge-tick--major {
+  stroke: var(--dew);
+  stroke-width: 2;
+  opacity: 0.9;
+}
+
+.gauge-needle {
+  transform-origin: 120px 120px;
+  animation: needle-sweep 9s ease-in-out infinite;
+}
+
+.gauge-needle__line {
+  stroke: var(--gauge);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.gauge-needle__hub {
+  fill: var(--gauge);
+}
+
+@keyframes needle-sweep {
+  0% {
+    transform: rotate(-38deg);
+  }
+  50% {
+    transform: rotate(34deg);
+  }
+  100% {
+    transform: rotate(-38deg);
+  }
+}
+
+/* ---- Form panel ---- */
+.form-panel {
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 380px;
+}
+
+.form-card__heading {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.form-card__subheading {
+  color: var(--steel);
+  font-size: 14px;
+  margin: 0 0 32px;
+}
+
+.form-field {
+  margin-bottom: 18px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.form-field input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--mist);
+  font-size: 15px;
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+
+.form-field input:focus {
+  border-color: var(--gauge);
+  outline: none;
+}
+
+.form-error {
+  background: #fdecec;
+  color: var(--danger);
+  border: 1px solid #f6c6c7;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 10px;
+  background: var(--gauge);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.btn-primary:hover {
+  background: var(--gauge-dark);
+}
+
+.btn-primary:active {
+  transform: scale(0.99);
+}
+
+.btn-primary:disabled {
+  background: var(--steel-soft);
+  cursor: not-allowed;
+}
+
+.form-switch {
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--steel);
+  text-align: center;
+}
+
+.form-switch a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  color: var(--steel);
+}

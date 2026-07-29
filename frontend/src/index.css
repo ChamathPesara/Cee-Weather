@@ -1,0 +1,68 @@
+:root {
+  /* Color tokens - "barometric" palette: deep sky ink, rising-pressure coral, dew teal */
+  --ink: #0e1f33;
+  --ink-soft: #16334f;
+  --mist: #f6f8fa;
+  --paper: #ffffff;
+  --steel: #5c7a94;
+  --steel-soft: #9db2c4;
+  --gauge: #ff7a59;
+  --gauge-dark: #e8613f;
+  --dew: #2fbf9f;
+  --danger: #e5484d;
+  --border: #e2e8ef;
+
+  /* Type */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Layout */
+  --radius: 14px;
+  --shadow-soft: 0 20px 60px -20px rgba(14, 31, 51, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--mist);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: var(--gauge-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gauge);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

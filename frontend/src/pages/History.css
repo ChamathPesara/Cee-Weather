@@ -1,0 +1,19 @@
+.history-page__body { max-width: 720px; margin: 0 auto; padding: 48px 32px 64px; }
+.history-page__header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+.history-page__header h1 { font-size: 26px; margin-bottom: 6px; }
+.history-page__hint { color: var(--steel); margin: 0; }
+.history-page__clear {
+  border: 1px solid var(--border); background: transparent; color: var(--danger); padding: 9px 16px;
+  border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.history-page__clear:hover:not(:disabled) { border-color: var(--danger); background: #fdecec; }
+.history-page__clear:disabled { opacity: 0.6; cursor: default; }
+.history-page__list { border: 1px solid var(--border); border-radius: var(--radius); padding: 8px; background: var(--paper); }
+
+.history-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.history-list__item { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-radius: 8px; background: var(--mist); }
+.history-list__query { display: block; font-size: 14px; font-weight: 500; color: var(--ink); }
+.history-list__time { display: block; font-size: 12px; color: var(--steel); margin-top: 2px; }
+.history-list__delete { border: none; background: transparent; color: var(--steel); font-size: 20px; line-height: 1; cursor: pointer; padding: 4px 10px; }
+.history-list__delete:hover { color: var(--danger); }
+.history-loading, .history-empty { font-size: 13px; color: var(--steel); padding: 14px; }
